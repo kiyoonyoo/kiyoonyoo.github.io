@@ -17,4 +17,4 @@ social: false  # includes social icons at the bottom of the page
 
 I am an applied research scientist at [Krafton](https://www.krafton.ai/ko/), where I specialize in developing embodied AI agents that enhance interactive gaming experiences. Currently, I am working on building on-device agents for [gameplay](https://www.theverge.com/2025/1/6/24337949/nvidia-ace-ai-npcs-pubg-ally-teammate), enabling real-time, context-aware interactions and strategic cooperation with players.
 
-I recieved my Ph.D. from Seoul National University under Nojun Kwak's guidance with research emphasizing the safety and robustness of language models, including areas such as adversarial defense, watermarking/
+I recieved my Ph.D. from Seoul National University under Nojun Kwak's guidance with research emphasizing the safety and robustness of language models, including areas such as adversarial attack and defense and watermarking.

@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://bangawayoo.github.io/sitemap.xml
+Sitemap: https://kiyoonyoo.github.io/sitemap.xml

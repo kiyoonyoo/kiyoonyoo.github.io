@@ -13,9 +13,22 @@
 - title: Work Experience
   type: time_table
   contents:
-    - title: Machine Learning Research Engineer
+    - title: Applied Research Scientist
       institution: Krafton
       year: 2024.09 - Now
       description:
         - On-device agents for gameplay
-        - Retrieval and RAG for question-answering 
+        - Retrieval for question-answering 
+    - title: Research Intern
+      institution: Naver Webtoon
+      year: Aug. 2023 - Dec. 2023
+      description:
+        - "[Conversational AI](https://ai.comic.naver.com/lab/character-chat): Data generation / curation, evaluation of model hallucinations"
+        - Preprocessing of public Korean corpus and pretraining sLLM
+        - Research in watermarking LLMs and copyright protection for T2I generative models (1 paper in NAACL 24, 1 paper in CVPR 2025)
+        - 3rd place in "N Innovation 2023" (Competition for innovative business & services across Naver)
+    - title: Research Intern
+      institution: Naver Webtoon
+      year: June 2022 - Aug. 2022
+      description:
+        - Research in natural language watermarking (1 paper in ACL 23)

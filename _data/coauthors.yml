@@ -1,61 +1,8 @@
-"Kwon":
-  - firstname: ["Patrick"]
-    url: https://scholar.google.com/citations?user=XRKA-DkAAAAJ
-
-"Back":
-  - firstname: ["Jihye"]
-    url: https://scholar.google.com/citations?user=LmU3mCgAAAAJ
-
-"Hong":
-  - firstname: ["Kibeom"]
-    url: https://scholar.google.com/citations?user=-imqSqoAAAAJ
-
-"Lee":
-  - firstname: ["Junsoo"]
-    url: https://ssuhan.github.io/
-  - firstname: ["Pilhyeon"]
-    url: https://pilhyeon.github.io
-  - firstname: ["Chunggi"]
-    url: https://chungyi347.github.io/
 
 "Kim":
-  - firstname: ["Daesik"]
-    url: https://scholar.google.com/citations?user=YUcWWbEAAAAJ
   - firstname: ["Jangho"]
     url: https://sites.google.com/view/ml-pr
-  - firstname: ["Sungnyun"]
-    url: https://bit.ly/sungnyunkim
-  - firstname: ["Kunhee"]
-    url: https://kunheekim.xyz
 
-"Sohn":
-  - firstname: ["Kyung-Ah"]
-    url: https://sites.google.com/site/kasohn/home
-
-"Kang":
-  - firstname: ["Byungkon"]
-    url: https://sites.google.com/view/byungkon/home
-
-"Yoo":
-  - firstname: ["Jaejun"]
-    url: https://sites.google.com/view/jaejunyoo
-
-"Jeon":
-  - firstname: ["Seogkyu"]
-    url: https://scholar.google.com/citations?user=w-byizkAAAAJ
-
-"Uh":
-  - firstname: ["Youngjung"]
-    url: https://vilab.yonsei.ac.kr
-
-"Byun":
-  - firstname: ["Hyeran"]
-    url: http://cvpr.yonsei.ac.kr/main
-
-"Nam":
-  - firstname: ["Seung-Hun"]
-    url: https://scholar.google.com/citations?user=QIjkOgEAAAAJ
-
-"Moon":
-  - firstname: ["Jeong-Hyeon"]
-    url: https://scholar.google.co.kr/citations?user=Gqw3HVIAAAAJ
+"Ahn":
+ - firstname: ["Namhyuk"]
+   url: https://nmhkahn.github.io

@@ -374,6 +374,16 @@ footer.sticky-bottom {
       }
     }
   }
+
+  .card-text {
+    .items {
+      .item, .subitem {
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 
 // Repositories

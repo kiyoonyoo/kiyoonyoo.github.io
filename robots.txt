@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://bangawayoo.github.io/sitemap.xml

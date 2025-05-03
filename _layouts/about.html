@@ -10,7 +10,6 @@ layout: default
           </h1>
           <p class="desc">{{ page.subtitle }}</p>
         </header>
-
         <article>
           {% if page.profile -%}
           <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
@@ -46,15 +45,26 @@ layout: default
             {%- include news.html limit=true %}
           {%- endif %}
 
-          <!-- Latest posts -->
-          {% if page.latest_posts -%}
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
-            {%- include latest_posts.html %}
-          {%- endif %}
-
+          <!-- Work Experience -->
+          <div style="margin-top: 3em;"></div>
+          {% if page.work_experience %}
+          <section id="work-experience">
+            <h2>Work Experience</h2>
+            {% for job in page.work_experience %}
+              <div style="margin-bottom: 1em;">
+                <strong>{{ job.title }}</strong>, 
+                <a href="{{ job.company_url }}">{{ job.company }}</a> <br>
+                <em>{{ job.period }}</em><br>
+                {{ job.description | markdownify }}
+              </div>
+            {% endfor %}
+          </section>
+          {% endif %}
+          
           <!-- Selected papers -->
+          <div style="margin-top: 3em;"></div>
           {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
+            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Selected Publications</a></h2>
             {%- include selected_papers.html %}
           {%- endif %}
 

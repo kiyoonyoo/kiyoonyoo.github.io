@@ -15,18 +15,23 @@
   contents:
     - title: Applied Research Scientist
       institution: Krafton
-      year: 2024.09 - Now
-      description:
-        - On-device agents for gameplay
-        - Retrieval for question-answering 
+      year: Aug. 2024 – Present
+      description: |
+        Developing embodied AI agents for real-time interactive gameplay in PUBG.  
+        - Designed and deployed on-device agent architecture for responsive player interaction.
+        - Prototype demonstrated at CES 2025, showcasing novel applications of embodied AI in gaming.
     - title: Research Intern
       institution: Naver Webtoon
       year: Aug. 2023 - Dec. 2023
-      description:
-        - "[Conversational AI](https://ai.comic.naver.com/lab/character-chat): Data generation / curation, evaluation of model hallucinations"
-        - Preprocessing of public Korean corpus and pretraining sLLM
-        - Research in watermarking LLMs and copyright protection for T2I generative models (1 paper in NAACL 24, 1 paper in CVPR 2025)
-        - 3rd place in "N Innovation 2023" (Competition for innovative business & services across Naver)
+      description: |
+        Contributed to [Character Chat](https://ai.comic.naver.com/lab/character-chat) an AI chatbot service mimicking webtoon characters’ personalities and speech styles (used by over 3.3M users)
+          - Focused on data generation, hallucination evaluation, and improving character alignment for immersive, in-world dialogue.
+          - Implemented pretraining of a small-scale LM from Korean data collection and preprocessing.
+
+        
+        Conducted research in copyright protection 
+          - LLM watermarking and copyright protection for text-to-image models (1 paper at NAACL 2024 and 1 at CVPR 2025).
+          - Placed 3rd in "N Innovation 2023", an internal competition for novel AI-driven services across Naver.
     - title: Research Intern
       institution: Naver Webtoon
       year: June 2022 - Aug. 2022

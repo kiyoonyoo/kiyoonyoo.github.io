@@ -1,0 +1,85 @@
+{% raw %}{% extends "default.html" %}{% endraw %}
+{% raw %}{% assign page_type = "project" %}{% endraw %} <!-- Optional: for body classes or specific includes in default.html -->
+
+<div class="container project-page-container py-4"> {# Added a container for better spacing and control #}
+
+  <h1 class="project-title">{{ page.title }}</h1>
+
+  {# Media Section (Display one primary media item) #}
+  {% raw %}{% if page.video_embed_url %}
+    <div class="project-video-wrapper embed-responsive embed-responsive-16by9 mb-4"> {# Added Bootstrap classes for responsive video #}
+      <iframe class="embed-responsive-item" src="{{ page.video_embed_url }}" frameborder="0" allowfullscreen></iframe>
+    </div>
+  {% elsif page.main_image_path %}
+    <div class="project-image-wrapper text-center mb-4"> {# Added text-center for image #}
+      <img src="{{ '/assets/img/projects/' | append: page.main_image_path | relative_url }}" alt="{{ page.title }} main image" class="img-fluid rounded"> {# Added rounded class #}
+    </div>
+  {% endif %}{% endraw %}
+
+  {# Details Section #}
+  <div class="project-meta card mt-4 mb-4 shadow-sm"> {# Added shadow-sm for subtle depth #}
+    <div class="card-body">
+      <h5 class="card-title">Project Details</h5>
+      <p class="card-text"><strong>Status:</strong> {{ page.status }}</p>
+      <p class="card-text"><strong>Duration:</strong> 
+        {% raw %}{{ page.start_date | date: "%B %Y" }} – {% if page.end_date %}{{ page.end_date | date: "%B %Y" }}{% else %}Ongoing{% endif %}{% endraw %}
+      </p>
+      {% raw %}{% if page.tags and page.tags != empty %}
+      <p class="card-text"><strong>Tags:</strong> 
+        {% for tag in page.tags %}
+          <span class="badge badge-light mr-1">{{ tag }}</span> {# Using badges for tags #}
+        {% endfor %}
+      </p>
+      {% endif %}{% endraw %}
+      {% raw %}{% if page.technologies_used and page.technologies_used != empty %}
+      <p class="card-text"><strong>Technologies:</strong> 
+        {% for tech in page.technologies_used %}
+          <span class="badge badge-info mr-1">{{ tech }}</span> {# Using badges for technologies, different color #}
+        {% endfor %}
+      </p>
+      {% endif %}{% endraw %}
+      <div class="project-links mt-3">
+        {% raw %}{% if page.repository_url %}
+          <a href="{{ page.repository_url }}" class="btn btn-outline-primary mr-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
+        {% endif %}{% endraw %}
+        {% raw %}{% if page.demo_url %}
+          <a href="{{ page.demo_url }}" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        {% endif %}{% endraw %}
+      </div>
+    </div>
+  </div>
+
+  {# Main Content (Long Description) #}
+  {% raw %}
+  <div class="project-content-container mt-4">
+    <h2>About this project</h2>
+    <div class="project-long-description">
+      {{ content }}
+    </div>
+  </div>
+  {% endraw %}
+
+  {# Related Publications Section (Basic display) #}
+  {% raw %}
+  {% if page.related_publications_ids and page.related_publications_ids != empty %}
+  <div class="project-related-publications mt-5"> {# Increased top margin #}
+    <h2 class="mb-3">Related Publications</h2> {# Added margin to heading #}
+    <ul class="list-group"> {# Using list-group for better styling #}
+      {% for pub_id in page.related_publications_ids %}
+        <li class="list-group-item"> {# Styling list items #}
+          {% assign_local related_pub = site.publications | where:"bibtex_key", pub_id | first %}
+          {% if related_pub %}
+            <a href="{{ related_pub.url | relative_url }}">{{ related_pub.title }}</a>
+            <small class="text-muted d-block">Reference ID: {{ pub_id }}</small> {# Displaying pub_id more clearly #}
+          {% else %}
+            <span class="text-danger">Publication with ID '{{ pub_id }}' not found.</span> {# More visible error #}
+            <small class="text-muted d-block">Ensure this ID matches a 'bibtex_key' in your publications data.</small>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {% endraw %}
+
+</div> {# End of container #}

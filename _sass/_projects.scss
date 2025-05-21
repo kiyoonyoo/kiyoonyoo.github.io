@@ -1,0 +1,229 @@
+// SCSS rules for project showcase elements.
+
+// General Project Page (`projects_listing.html` specific styles)
+.projects-listing-page { // Add this class to the body or a main wrapper in projects_listing.html if needed for specificity
+  #filter-controls {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa; // Light background for filter area
+    border-radius: 0.25rem;
+
+    .filter-group { // This class would need to be added to the HTML structure in projects_listing.html if used
+      margin-bottom: 1rem;
+      h5 { margin-bottom: 0.5rem; font-size: 1rem; font-weight: bold; }
+      select, input[type="text"], input[type="search"] { width: 100%; } // Bootstrap .form-control usually handles this
+      .checkbox-group label { margin-right: 0.5rem; font-weight: normal; } // For custom checkbox groups if not using .form-check
+    }
+  }
+}
+
+// Project Cards (`.project-card`)
+.project-card {
+  margin-bottom: 1.5rem; // Spacing between cards in the grid
+
+  .card-img-top-wrapper { // Wrapper for consistent image height
+    height: 200px; // Or desired fixed height
+    overflow: hidden;
+    display: flex; // For centering if image aspect ratio varies significantly
+    align-items: center;
+    justify-content: center;
+    background-color: #eee; // Placeholder bg while image loads or if no image
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Crop image to fit, not distort
+    }
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%; // Make card body take full height of its container (if parent has defined height)
+
+    .card-title { 
+      font-size: 1.25rem; 
+      margin-bottom: 0.5rem; 
+    }
+    .card-text.short-description { 
+      font-size: 0.9rem; 
+      color: #555; 
+      margin-bottom: 0.75rem; 
+      min-height: 50px; // Min height for consistency
+      flex-grow: 1; // Allows description to expand and push footer items down
+    }
+    .project-tags { // Wrapper for tags
+      margin-bottom: 0.5rem; 
+      .badge.tag-badge { 
+        font-size: 0.75rem; 
+        margin-right: 0.25rem; 
+        background-color: #e9ecef; 
+        color: #333; 
+        margin-bottom: 0.25rem; // For wrapping
+      }
+    }
+    .project-status-display-wrapper { // Wrapper for status
+        margin-bottom: 0.5rem;
+        .project-status-display { 
+            font-size: 0.8rem; 
+            font-weight: bold; 
+        }
+    }
+    
+    // Color code status - applied to the parent card for easier selection via data attribute
+    &[data-status="completed"] .project-status-display { color: green; }
+    &[data-status="ongoing"] .project-status-display { color: orange; }
+    &[data-status="archived"] .project-status-display { color: #6c757d; } // Bootstrap secondary
+    &[data-status="paused"] .project-status-display { color: #ffc107; } // Bootstrap warning
+  }
+
+  .project-links { // Added this class to group links, ensures it's pushed to bottom by flex-grow on description
+    margin-top: auto; // Pushes to the bottom of card-body
+    padding-top: 0.5rem; // Some space above the links
+    a { 
+      margin-right: 0.5rem; 
+      font-size: 0.9rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  // Note: .card-footer is not used in the current project_card.html, 
+  // but if it were, these styles would apply.
+  // If links are moved to a .card-footer, .project-links styling might need adjustment.
+  .card-footer { 
+    background-color: transparent;
+    border-top: none;
+    padding-top: 0; // If links are the only content
+    // .project-links a { margin-right: 0.5rem; } // Original location, moved to .project-links directly
+  }
+}
+
+// Individual Project Page (`project_detail.html` specific styles)
+.project-page-container { // Wrapper in project_detail.html
+  .project-title { 
+    margin-bottom: 1.5rem; 
+    font-size: 2.5rem; 
+  }
+  .project-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border-radius: 0.25rem;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .project-image-wrapper img { // Assumes img-fluid is also present for responsiveness
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .project-meta.card {
+    margin-bottom: 2rem;
+    .card-title { 
+      font-size: 1.2rem; 
+      color: #333;
+    }
+    .project-links a i { 
+      margin-right: 0.3rem; 
+    }
+    .badge { // General badge styling within meta card
+        font-size: 0.85rem;
+        padding: 0.4em 0.6em;
+    }
+  }
+  .project-content-container h2 { 
+    font-size: 1.75rem; 
+    margin-top: 2rem;
+    margin-bottom: 1rem; 
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+  }
+  .project-long-description { 
+    line-height: 1.7; 
+    font-size: 1.05rem;
+    color: #454545;
+  }
+  .project-related-publications {
+    margin-top: 3rem; // Increased from 2rem
+    h2 {
+      font-size: 1.75rem; // Consistent h2
+      margin-bottom: 1.5rem; // Increased from 1rem
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.5rem;
+    }
+    ul { 
+      padding-left: 0; 
+      list-style: none; 
+    }
+    li { 
+      margin-bottom: 0.75rem; // Increased from 0.5rem
+      padding: 0.75rem 1rem; // Increased from 0.5rem
+      background-color: #f8f9fa; 
+      border-radius: 0.25rem; 
+      border: 1px solid #e9ecef;
+      a {
+        font-weight: bold;
+      }
+      small {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .projects-listing-page {
+    #filter-controls {
+      .filter-group { // If direct children of a row, Bootstrap columns like .col-md-3 will stack automatically.
+        // This rule might be needed if the structure is different or for finer control.
+        // For example, if filter groups are not in Bootstrap columns:
+        // margin-bottom: 1rem; 
+      }
+      // If using Bootstrap's grid for the layout of filter groups,
+      // .col-md-3 inside a .row would automatically stack them on smaller screens.
+      // No specific override might be needed unless default stacking isn't desired.
+    }
+  }
+
+  .project-page-container {
+    .project-title {
+      font-size: 2rem; // Adjust title size for mobile
+    }
+    .project-content-container h2,
+    .project-related-publications h2 {
+      font-size: 1.5rem; // Adjust h2 sizes for mobile
+    }
+  }
+}
+
+@media (max-width: 576px) {
+    .project-card .card-body .card-title {
+        font-size: 1.1rem; // Smaller titles on very small screens
+    }
+    .project-card .card-text.short-description {
+        min-height: 40px; // Adjust min-height
+        font-size: 0.85rem;
+    }
+    .project-page-container { // Further adjustments for very small screens
+        .project-meta.card .badge {
+            font-size: 0.8rem; // Smaller badges
+            padding: 0.3em 0.5em;
+        }
+        .project-links a { // Smaller buttons/links on project detail page meta card
+            font-size: 0.9rem;
+        }
+    }
+}

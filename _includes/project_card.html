@@ -1,0 +1,45 @@
+<div class="grid-item project-card card hoverable" 
+    data-title="{{ project.title | escape }}" 
+    data-short-description="{{ project.short_description | escape }}" 
+    data-tags="{{ project.tags | join: ',' | downcase | escape }}" 
+    data-technologies="{{ project.technologies_used | join: ',' | downcase | escape }}" 
+    data-status="{{ project.status | downcase | escape }}" 
+    data-start-date="{{ project.start_date | date: '%s' }}" 
+    {% if project.end_date %}data-end-date="{{ project.end_date | date: '%s' }}"{% endif %} 
+    data-order="{{ project.order | default: 999 }}">
+
+  <a href="{{ project.url | relative_url }}" class="card-link">
+    {% if project.main_image_path %}
+    <div class="card-img-top-wrapper">
+      <img src="{{ '/assets/img/projects/' | append: project.main_image_path | relative_url }}" alt="{{ project.title }} thumbnail" class="card-img-top">
+    </div>
+    {% endif %}
+    <div class="card-body">
+      <h5 class="card-title">{{ project.title }}</h5>
+      <p class="card-text short-description">{{ project.short_description }}</p>
+      
+      <div class="project-tags mb-2">
+        {% for tag in project.tags %}
+          <span class="badge tag-badge mr-1">{{ tag }}</span> {# SCSS targets .badge.tag-badge #}
+        {% endfor %}
+      </div>
+
+      <div class="project-status-display-wrapper mb-2"> {# Wrapper for status #}
+        <small class="text-muted">Status: <span class="project-status-display">{{ project.status }}</span></small>
+      </div>
+      
+      <div class="project-links"> {# This div will be pushed to the bottom by flex-grow on description #}
+        {% if project.repository_url %}
+          <a href="{{ project.repository_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary mr-1" title="Repository">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        {% endif %}
+        {% if project.demo_url %}
+          <a href="{{ project.demo_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary" title="Demo">
+            <i class="fas fa-external-link-alt"></i> Demo
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </a>
+</div>

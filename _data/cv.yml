@@ -22,7 +22,7 @@
 
         - Designed an embodied agent workflow for fast real-time gameplay with a dialogue/planning module over in-game voice chat.
         - Built a data flywheel with human feedback and synthetic data augmentation for continual updates.
-        - Trained and distilled small language models for real-time inference on consumer GPUs using quantization.
+        - Training via imitation learning and model distillation of small language models for real-time inference on consumer GPUs using quantization.
 
     - title: AI Engineer Intern
       institution: Naver Webtoon

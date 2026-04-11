@@ -1,39 +1,38 @@
 - title: Education
   type: time_table
   contents:
-    - title: Ph.D. in Engineering
-      institution: Seoul National University, Korea
-      year: 2024
+    - title: Ph.D. in Intelligence and Information
+      institution: Department of Intelligence and Information, Seoul National University, Korea
+      year: Sept. 2019 - Aug. 2024
       description:
-        - Advised by Nojun Kwak
-    - title: Bachelor in Food Science Technology (Minor in Industrial Engineering)
-      institution: Seoul National University, Korea
-      year: 2019
+        - Supervised by Prof. Nojun Kwak
+    - title: "B.S. in Food Science and Biotechnology (Minor: Industrial Engineering)"
+      institution: Department of Food and Animal Biotechnology, Seoul National University, Korea
+      year: March 2015 - Aug. 2019
 
 - title: Work Experience
   type: time_table
   contents:
     - title: Applied Research Scientist
-      institution: Krafton
-      year: Aug. 2024 – Present
+      institution: Krafton AI
+      year: Sept. 2024 - Present
       description: |
-        Developing embodied AI agents for real-time interactive gameplay in PUBG.  
-        - Designed and deployed on-device agent architecture for responsive player interaction.
-        - Prototype demonstrated at CES 2025, showcasing novel applications of embodied AI in gaming.
-    - title: Research Intern
+        Developing PUBG ALLY, a real-time embodied companion agent that can play games alongside users.
+        Early demo was showcased at [CES 2025](https://www.youtube.com/shorts/CSf8wglfhO4) and covered by [The Verge](https://www.theverge.com/2025/1/6/24337949/nvidia-ace-ai-npcs-pubg-ally-teammate).
+
+        - Designed an embodied agent workflow for fast real-time gameplay with a dialogue/planning module over in-game voice chat.
+        - Built a data flywheel with human feedback and synthetic data augmentation for continual updates.
+        - Trained and distilled small language models for real-time inference on consumer GPUs using quantization.
+
+    - title: AI Engineer Intern
       institution: Naver Webtoon
       year: Aug. 2023 - Dec. 2023
       description: |
-        Contributed to [Character Chat](https://ai.comic.naver.com/lab/character-chat) an AI chatbot service mimicking webtoon characters’ personalities and speech styles (used by over 3.3M users)
-          - Focused on data generation, hallucination evaluation, and improving character alignment for immersive, in-world dialogue.
-          - Implemented pretraining of a small-scale LM from Korean data collection and preprocessing.
+        Contributed to Character Chat, a production-scale AI chatbot mimicking webtoon character personalities and speech styles, used by over 6M users ([media release](https://www.digitaltoday.co.kr/en/view/11588/naver-webtoon-launches-ai-chatbot-character-chat-on-japans-line-manga)).
 
-        
-        Conducted research in copyright protection 
-          - LLM watermarking and copyright protection for text-to-image models (1 paper at NAACL 2024 and 1 at CVPR 2025).
-          - Placed 3rd in "N Innovation 2023", an internal competition for novel AI-driven services across Naver.
-    - title: Research Intern
-      institution: Naver Webtoon
-      year: June 2022 - Aug. 2022
-      description:
-        - Research in natural language watermarking (1 paper in ACL 23)
+        - Led prompt engineering for LLM-as-evaluator workflows to measure and reduce out-of-character responses.
+        - Designed and implemented data collection, preprocessing, and pretraining pipelines for an in-house small Korean language model.
+
+        Conducted research in copyright protection:
+        - LLM watermarking and copyright protection for text-to-image models (NAACL 2024, CVPR 2025).
+        - Placed 3rd in "N Innovation 2023", an internal competition for novel AI-driven services across Naver.

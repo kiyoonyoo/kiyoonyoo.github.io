@@ -372,6 +372,11 @@ footer.sticky-bottom {
         color: var(--global-card-bg-color) !important;
         background-color: var(--global-theme-color) !important;
       }
+
+      .cv-date-badge {
+        white-space: nowrap;
+        display: inline-block;
+      }
     }
   }
 

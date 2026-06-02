@@ -213,7 +213,7 @@ defaults:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ['robots.txt']
+  exclude: ['robots.txt', 'google83302c580a510d17.html']
   uglifier_args:
     harmony: true
 

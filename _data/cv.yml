@@ -13,22 +13,28 @@
 - title: Work Experience
   type: time_table
   contents:
+    - title: Machine Learning Engineer
+      institution: Zoox
+      year: May 2026 - Present
+      description: |
+        - Post-training foundation models for autonomous driving.
+        - Training vision-language-action (VLA) models for autonomous driving.
+
     - title: Applied Research Scientist
       institution: Krafton AI
-      year: Sept. 2024 - Present
+      year: Sept. 2024 - Apr. 2026
       description: |
-        Developing PUBG ALLY, a real-time embodied companion agent that can play games alongside users.
+        Developed **PUBG ALLY**, a real-time embodied companion agent for in-game voice chat dialogue and strategic planning, serviced as a [beta test](https://www.krafton.com/en/news/press/krafton-introduces-pubg-ally-beta-test/).
         Early demo was showcased at [CES 2025](https://www.youtube.com/shorts/CSf8wglfhO4) and covered by [The Verge](https://www.theverge.com/2025/1/6/24337949/nvidia-ace-ai-npcs-pubg-ally-teammate).
 
-        - Designed an embodied agent workflow for fast real-time gameplay with a dialogue/planning module over in-game voice chat.
-        - Built a data flywheel with human feedback and synthetic data augmentation for continual updates.
-        - Training via imitation learning and model distillation of small language models for real-time inference on consumer GPUs using quantization.
+        - Designed an embodied agent architecture with a dialogue/planning module for low-latency in-game voice chat.
+        - Trained Small Language Models (SLMs) using closed-loop human feedback and synthetic data for real-time, low-latency inference on consumer GPUs.
 
     - title: AI Engineer Intern
       institution: Naver Webtoon
       year: Aug. 2023 - Dec. 2023
       description: |
-        Contributed to Character Chat, a production-scale AI chatbot mimicking webtoon character personalities and speech styles, used by over 6M users ([media release](https://www.digitaltoday.co.kr/en/view/11588/naver-webtoon-launches-ai-chatbot-character-chat-on-japans-line-manga)).
+        Contributed to Character Chat, a production RAG-based AI chatbot mimicking webtoon character personalities and speech styles, serving over 6M users ([media release](https://www.digitaltoday.co.kr/en/view/11588/naver-webtoon-launches-ai-chatbot-character-chat-on-japans-line-manga)).
 
         - Led prompt engineering for LLM-as-evaluator workflows to measure and reduce out-of-character responses.
         - Designed and implemented data collection, preprocessing, and pretraining pipelines for an in-house small Korean language model.

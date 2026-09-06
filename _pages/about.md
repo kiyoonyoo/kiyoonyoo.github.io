@@ -38,6 +38,6 @@ work_experience:
 ---
 [[Google Scholar](https://scholar.google.com/citations?user=S93OUYQAAAAJ&hl=en)] [[CV](assets/CV.pdf)]
 
-I work on post-training foundation models and vision-language-action (VLA) models for autonomous driving at [Zoox](https://zoox.com/). Previously, I developed real-time embodied [companion agents](https://www.krafton.com/en/news/press/krafton-introduces-pubg-ally-beta-test/) for PUBG (15M+ MAUs) at Krafton and contributed to [Character Chat](https://ai.comic.naver.com/lab/character-chat), a production RAG-based chatbot serving 6M+ users at Naver Webtoon.
+I work on post-training foundation models and vision-language-action (VLA) models for autonomous driving at [Zoox](https://zoox.com/). Previously, I developed real-time embodied [companion agents](https://www.krafton.com/en/news/press/krafton-introduces-pubg-ally-beta-test/) for PUBG at Krafton and contributed to [Character Chat](https://ai.comic.naver.com/lab/character-chat), a production RAG-based chatbot at Naver Webtoon.
 
 I recieved my Ph.D. from Seoul National University under Nojun Kwak's guidance with research emphasizing the safety and robustness of language models, including areas such as adversarial attack and defense and watermarking.
